@@ -1,0 +1,39 @@
+{
+  "name": "fdns-ui-react-docs",
+  "description": "This is the documentation React app for the FDNS UI React Library",
+  "version": "1.0.0",
+  "author": "Centers for Disease Control and Prevention (http://github.com/CDCgov)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CDCgov/fdns.git"
+  },
+  "dependencies": {
+    "ajv": "^6.5.1",
+    "fdns-ui-react": "^0.5.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-highlight": "^0.12.0",
+    "react-json-pretty": "^1.7.4",
+    "react-remarkable": "^1.1.3",
+    "sweetalert2": "^7.1.0"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "react-scripts": "^2.1.1"
+  },
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "restart": "cd .. && npm link && cd example && npm i && npm start"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
