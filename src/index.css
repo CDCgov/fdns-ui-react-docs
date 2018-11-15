@@ -1,0 +1,101 @@
+.jumbotron {
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#095fa5+0,009fdb+100 */
+  background: #095fa5; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #095fa5 0%, #009fdb 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #095fa5 0%,#009fdb 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #095fa5 0%,#009fdb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#095fa5', endColorstr='#009fdb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+}
+
+#docs {
+  padding: 30px;
+}
+
+p.version {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+div.contain-component {
+  border: 2px solid #ddd;
+  padding: 25px;
+  background-image: url(./checkers.png);
+  background-size: 5%;
+}
+
+div.component, div.shape {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border-top: 1px solid #eee;
+  clear: both;
+}
+
+div.component.blue div.contain-component {
+  background-image: none;
+  background-color: #1273CA;
+}
+
+#sidenav {
+  max-height: 100%;
+  overflow: hidden;
+  padding-right: 20px;
+}
+#sidenav.fixed {
+  position: fixed;
+  top: 70px;
+}
+#sidenav li {
+  margin: 10px 0;
+  list-style: none;
+}
+#sidenav li a {
+  font-size: 15px;
+}
+#sidenav ul {
+  padding: 0 10px;
+}
+#sidenav h3 {
+  cursor: pointer;
+  padding-left: 7px;
+  border-left: 3px solid rgba(0,0,0,0);
+}
+#sidenav h3:hover {
+  border-left: 3px solid #0197d4;
+}
+
+#docs > .col-md-10 > h2 {
+  font-size: 38px;
+}
+
+@media (max-width: 992px) {
+  #sidenav {
+    display: none;
+  }
+}
+
+div.important-notes {
+  background-color: #ffdad7;
+  border: 2px solid #d00000;
+  padding: 5px;
+  border-radius: 5px;
+  color: #111111;
+  text-align: center;
+}
+div.important-notes h4 {
+  font-size: 18px;
+}
+div.important-notes h4 i {
+  font-size: 24px;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: 3px;
+}
+
+.hljs-regexp, .hljs-link {
+  color: #00731d;
+}
+.hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs-tag .hljs-attr {
+  color: #004e4e;
+}
