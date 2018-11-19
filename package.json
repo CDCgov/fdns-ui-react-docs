@@ -1,7 +1,7 @@
 {
   "name": "fdns-ui-react-docs",
   "description": "This is the documentation React app for the FDNS UI React Library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Centers for Disease Control and Prevention (http://github.com/CDCgov)",
   "license": "Apache-2.0",
   "repository": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "ajv": "^6.5.1",
-    "fdns-ui-react": "^0.5.8",
+    "fdns-ui-react": "0.5.8",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
