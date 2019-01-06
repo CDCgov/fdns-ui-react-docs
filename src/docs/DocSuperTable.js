@@ -8,7 +8,11 @@ const data = messages.slice(0).splice(0,25);
 class DocSuperTable extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      headers: headers
+    };
     this.handleDetail = this.handleDetail.bind(this);
+    this.handleColumnResize = this.handleColumnResize.bind(this);
   }
 
   handleDetail(item) {
@@ -35,13 +39,22 @@ class DocSuperTable extends Component {
     return 226;
   }
 
+  // column resizing event for the table column
+  handleColumnResize(newColumnWidth, columnKey) {
+    headers[columnKey].width = newColumnWidth;
+    this.setState({
+      headers
+    })
+  }
+
   render() {
     const sampleComponent = (
-      <SuperTable data={data} 
-                  headers={headers} 
+      <SuperTable data={data}
+                  headers={this.state.headers}
                   onDetail={this.handleDetail}
                   getWidth={this.getWidth}
                   getHeight={this.getHeight}
+                  onColumnResize={this.handleColumnResize}
                   showErrorsAndWarnings={false}
                   ref="table" />
     );
