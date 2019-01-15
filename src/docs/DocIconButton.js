@@ -18,14 +18,14 @@ class DocIconButton extends Component {
   render() {
     const sampleComponent = (
       <div className="icon-buttons">
-        <IconButton icon="envelope" bsStyle="primary" onClick={this.handleClick}>{'Primary'}</IconButton>
-        <IconButton icon="cogs" bsStyle="success" onClick={this.handleClick}>{'Success'}</IconButton>
-        <IconButton icon="info-circle" bsStyle="info" onClick={this.handleClick}>{'Info'}</IconButton>
-        <IconButton icon="exclamation-triangle" bsStyle="danger" onClick={this.handleClick}>{'Danger'}</IconButton>
-        <IconButton icon="bookmark" bsStyle="transparent" onClick={this.handleClick}>{'Transparent'}</IconButton>
-        <IconButton icon="calendar" bsStyle="alternate" onClick={this.handleClick}>{'Alternate'}</IconButton>
-        <IconButton icon="laptop" bsStyle="clear" onClick={this.handleClick}>{'Clear'}</IconButton>
-        <IconButton image={imgDataLayers} imageAlt="Data Layers" bsStyle="white" onClick={this.handleClick}>{'White'}</IconButton>
+        <IconButton icon="envelope" color="primary" variant="contained" onClick={this.handleClick}>{'Primary'}</IconButton>
+        <IconButton icon="cogs" color="default" variant="contained" onClick={this.handleClick}>{'Success'}</IconButton>
+        <IconButton icon="info-circle" color="default" variant="contained" onClick={this.handleClick}>{'Info'}</IconButton>
+        <IconButton icon="exclamation-triangle" color="secondary" variant="contained" onClick={this.handleClick}>{'Danger'}</IconButton>
+        <IconButton icon="bookmark" color="default" variant="text" onClick={this.handleClick}>{'Transparent'}</IconButton>
+        <IconButton icon="calendar" color="default" variant="contained" onClick={this.handleClick}>{'Alternate'}</IconButton>
+        <IconButton icon="laptop" color="default" variant="outlined" onClick={this.handleClick}>{'Clear'}</IconButton>
+        <IconButton image={imgDataLayers} imageAlt="Data Layers" color="default" variant="outlined" onClick={this.handleClick}>{'White'}</IconButton>
       </div>
     );
     const sampleCode = '<IconButton>Button</IconButton>';
@@ -55,11 +55,6 @@ class DocIconButton extends Component {
         propType: 'string',
         defaultProp: '""',
         desc: 'This is a custom className that can be passed to the root div.'
-      },{
-        propName: 'bsStyle',
-        propType: 'string',
-        defaultProp: 'default',
-        desc: 'This is the style that gets passed to the bootstrap button.'
       },{
         propName: 'onClick',
         propType: 'func',
