@@ -12,7 +12,6 @@ class DocSuperTable extends Component {
       headers: headers
     };
     this.handleDetail = this.handleDetail.bind(this);
-    this.handleColumnResize = this.handleColumnResize.bind(this);
   }
 
   handleDetail(item) {
@@ -21,41 +20,12 @@ class DocSuperTable extends Component {
     swal('Handle Detail', 'Item detail has been triggered! Please check the console for the rest of the item information.', 'success');
   }
 
-  // need to update the dimensions with the dynamic width once the component mounted
-  componentDidMount() {
-    this.refs.table.updateDimensions();
-  }
-
-  // custom dynamic method for a dynamic width of the SuperTable
-  getWidth() {
-    if (document.getElementById('DocSuperTable'))
-      return document.getElementById('DocSuperTable').offsetWidth - 50;
-    else
-      return 800;
-  }
-
-  // custom dynamic method for a dynamic height of the SuperTable
-  getHeight() {
-    return 226;
-  }
-
-  // column resizing event for the table column
-  handleColumnResize(newColumnWidth, columnKey) {
-    headers[columnKey].width = newColumnWidth;
-    this.setState({
-      headers
-    })
-  }
-
   render() {
     const sampleComponent = (
       <SuperTable data={data}
                   headers={this.state.headers}
-                  onDetail={this.handleDetail}
-                  getWidth={this.getWidth}
-                  getHeight={this.getHeight}
-                  onColumnResize={this.handleColumnResize}
                   showErrorsAndWarnings={false}
+                  onDetail={this.handleDetail}
                   ref="table" />
     );
     const sampleCode = '<SuperTable data={[...]} headers={[...]} />';
@@ -95,21 +65,6 @@ class DocSuperTable extends Component {
         propType: 'number',
         defaultProp: '800',
         desc: 'This the fixed height value of the table, this can be overridden by getHeight for a dynamic height.'
-      },{
-        propName: 'getWidth',
-        propType: 'func',
-        defaultProp: null,
-        desc: 'This a function to dynamically provide a width value. It is dynamic so as to provide a consistently proportional number such as when the window resizes.'
-      },{
-        propName: 'getHeight',
-        propType: 'func',
-        defaultProp: null,
-        desc: 'This a function to dynamically provide a height value. It is dynamic so as to provide a consistently proportional number such as when the window resizes.'
-      },{
-        propName: 'actionsColumn',
-        propType: 'func',
-        defaultProp: null,
-        desc: 'This function creates a custom actions column.'
       }
     ];
 

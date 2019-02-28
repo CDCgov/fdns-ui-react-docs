@@ -3,7 +3,7 @@ import swal from 'sweetalert2';
 import Doc from './Doc';
 import { DataInspector, fixtures } from 'fdns-ui-react';
 const { messages } = fixtures;
-const data = messages.slice(0)[0];
+const data = Object.assign({}, messages.slice(0)[0]);
 data.total = 100;
 data.isUser = true;
 data.isAdmin = null;
