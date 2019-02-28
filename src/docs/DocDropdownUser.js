@@ -19,7 +19,7 @@ class DocDropdownUser extends Component {
   render() {
     const sampleComponent = (
       <div className="text-right">
-        <DropdownUser onSignOut={this.handleSignOut} />
+        <DropdownUser onSignOut={this.handleSignOut} placement={'bottom-end'} />
       </div>
     );
     const sampleCode = "<DropdownUser user={user} />";
@@ -34,6 +34,11 @@ class DocDropdownUser extends Component {
         propType: 'func',
         defaultProp: 'function(){}',
         desc: 'This gets called when the logout button is clicked.'
+      },{
+        propName: 'placement',
+        propType: 'string',
+        defaultProp: 'bottom-start',
+        desc: 'This determines the placement of the dropdown. It can be "bottom-start" or "bottom-end".'
       }
     ];
 

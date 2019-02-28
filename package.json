@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "ajv": "^6.5.1",
-    "fdns-ui-react": "0.5.8",
+    "fdns-ui-react": "0.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -21,14 +21,15 @@
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.2"
   },
   "scripts": {
     "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "restart": "cd .. && npm link && cd example && npm i && npm start"
+    "restart": "cd .. && npm link && cd example && npm i && npm start",
+    "link": "npm link ../fdns-ui-react && cd node_modules/fdns-ui-react && npm link react"
   },
   "browserslist": [
     ">0.2%",

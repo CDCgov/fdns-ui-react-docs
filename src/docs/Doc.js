@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import Markdown from 'react-remarkable';
 import JSONPretty from 'react-json-pretty';
+import { Paper, Typography, Table, TableBody, TableCell, TableHead, TableRow } from 'fdns-ui-react';
 
 // set the prop types from predefined shapes or standard types
 const _sampleProp = PropTypes.shape({
@@ -42,16 +43,16 @@ class Doc extends Component {
       if (defaultProp[0] === '{') {
         preDefaultProp = (<JSONPretty json={defaultProp}></JSONPretty>);
       } else {
-        preDefaultProp = (<pre>{defaultProp}</pre>);  
+        preDefaultProp = (<pre>{defaultProp}</pre>);
       }
     }
     return (
-      <tr key={i}>
-        <td>{propName}</td>
-        <td><em><Markdown>{propType}</Markdown></em></td>
-        <td>{preDefaultProp}</td>
-        <td><Markdown>{desc}</Markdown></td>
-      </tr>
+      <TableRow key={i}>
+        <TableCell>{propName}</TableCell>
+        <TableCell><em><Markdown>{propType}</Markdown></em></TableCell>
+        <TableCell>{preDefaultProp}</TableCell>
+        <TableCell><Markdown>{desc}</Markdown></TableCell>
+      </TableRow>
     );
   }
 
@@ -59,8 +60,8 @@ class Doc extends Component {
     if (important) {
       return (
         <div className="important-notes">
-          <h4><i className="fa fa-exclamation-triangle" aria-hidden="true"></i>Important:</h4>
-          <p>{important}</p>
+        <Typography variant="h5" color="inherit" gutterBottom><i className="fa fa-exclamation-triangle" aria-hidden="true"></i>Important:</Typography>
+          <Typography variant="h4" color="inherit" gutterBottom>{important}</Typography>
         </div>
       );
     }
@@ -73,30 +74,32 @@ class Doc extends Component {
 
     return (
       <div className={componentClassName} id={this.props.id}>
-        <h3>{this.props.tag}</h3>
-        <p>{this.props.desc}</p>
+        <Typography variant="h5" color="inherit" gutterBottom>{this.props.tag}</Typography>
+        <Typography color="inherit" gutterBottom>{this.props.desc}</Typography>
         <div className="contain-component">
           {this.props.sampleComponent}
         </div>
-        <h4>Sample Code</h4>
+        <Typography variant="h6" color="inherit" gutterBottom>Sample Code</Typography>
         <Highlight className='jsx'>
           {this.props.sampleCode}
         </Highlight>
         {this.renderImportant(this.props.important)}
-        <h4>Props</h4>
-        <table className="table table-striped table-bordered">
-          <thead>
-            <tr>
-              <th width="15%">Name</th>
-              <th width="15%">Type</th>
-              <th width="15%">Default</th>
-              <th width="55%">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.sampleProps.map(this.renderSampleProp)}
-          </tbody>
-        </table>
+        <Typography variant="h6" color="inherit" gutterBottom>Props</Typography>
+        <Paper elevation={12}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell>Type</TableCell>
+                <TableCell>Default</TableCell>
+                <TableCell colSpan={3}>Description</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {this.props.sampleProps.map(this.renderSampleProp)}
+            </TableBody>
+          </Table>
+        </Paper>
       </div>
     );
   }
