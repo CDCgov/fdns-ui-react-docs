@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "ajv": "^6.5.1",
-    "fdns-ui-react": "0.6.0",
+    "fdns-ui-react": "0.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

@@ -32,7 +32,6 @@ import DocOptionErrorsWarnings from './docs/DocOptionErrorsWarnings';
 import DocOptionView from './docs/DocOptionView';
 import DocOptionExport from './docs/DocOptionExport';
 import DocOptionPageLimit from './docs/DocOptionPageLimit';
-// import DocBootstrap from './docs/DocBootstrap';
 
 // import shapes
 import ShapeAnalysis from './shapes/ShapeAnalysis';
@@ -150,7 +149,7 @@ class App extends Component {
           <Grid item xs={2}>
             <ul id="sidenav">
               <li>
-                <Typography onClick={this.collapseNav.bind(this, 'layout')} component="h3" variant="h5" color="inherit">Layout</Typography>
+                <Typography onClick={this.collapseNav.bind(this, 'layout')} component="h6" variant="h6" color="inherit">Layout</Typography>
                 <Collapse timeout={timeout} in={this.state.layout}>
                   <ul>
                   <Typography>
@@ -171,7 +170,7 @@ class App extends Component {
                 </Collapse>
               </li>
               <li>
-                <Typography onClick={this.collapseNav.bind(this, 'search')} component="h3" variant="h5" color="inherit">Search</Typography>
+                <Typography onClick={this.collapseNav.bind(this, 'search')} component="h6" variant="h6" color="inherit">Search</Typography>
                 <Collapse timeout={timeout} in={this.state.search}>
                   <ul>
                     <Typography>
@@ -181,7 +180,7 @@ class App extends Component {
                 </Collapse>
               </li>
               <li>
-                <Typography onClick={this.collapseNav.bind(this, 'filters')} component="h3" variant="h5" color="inherit">Filters</Typography>
+                <Typography onClick={this.collapseNav.bind(this, 'filters')} component="h6" variant="h6" color="inherit">Filters</Typography>
                 <Collapse timeout={timeout} in={this.state.filters}>
                   <ul>
                     <Typography>
@@ -195,7 +194,7 @@ class App extends Component {
                 </Collapse>
               </li>
               <li>
-                <Typography onClick={this.collapseNav.bind(this, 'data')} component="h3" variant="h5" color="inherit">Data</Typography>
+                <Typography onClick={this.collapseNav.bind(this, 'data')} component="h6" variant="h6" color="inherit">Data</Typography>
                 <Collapse timeout={timeout} in={this.state.data}>
                   <ul>
                     <Typography>
@@ -211,7 +210,7 @@ class App extends Component {
                 </Collapse>
               </li>
               <li>
-                <Typography onClick={this.collapseNav.bind(this, 'options')} component="h3" variant="h5" color="inherit">Options</Typography>
+                <Typography onClick={this.collapseNav.bind(this, 'options')} component="h6" variant="h6" color="inherit">Options</Typography>
                 <Collapse timeout={timeout} in={this.state.options}>
                   <ul>
                     <Typography>
@@ -225,7 +224,7 @@ class App extends Component {
                 </Collapse>
               </li>
               <li>
-                <Typography onClick={this.collapseNav.bind(this, 'shapes')} component="h3" variant="h5" color="inherit">Shapes</Typography>
+                <Typography onClick={this.collapseNav.bind(this, 'shapes')} component="h6" variant="h6" color="inherit">Shapes</Typography>
                 <Collapse timeout={timeout} in={this.state.shapes}>
                   <ul>
                     <Typography>
