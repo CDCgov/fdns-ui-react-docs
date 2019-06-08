@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
-import Markdown from 'react-remarkable';
+import ReactMarkdown from 'react-markdown';
 import JSONPretty from 'react-json-pretty';
 import { Paper, Typography, Table, TableBody, TableCell, TableHead, TableRow } from 'fdns-ui-react';
 
@@ -49,9 +49,9 @@ class Doc extends Component {
     return (
       <TableRow key={i}>
         <TableCell>{propName}</TableCell>
-        <TableCell><em><Markdown>{propType}</Markdown></em></TableCell>
+        <TableCell><em><ReactMarkdown source={propType}/></em></TableCell>
         <TableCell>{preDefaultProp}</TableCell>
-        <TableCell><Markdown>{desc}</Markdown></TableCell>
+        <TableCell><ReactMarkdown source={desc}/></TableCell>
       </TableRow>
     );
   }

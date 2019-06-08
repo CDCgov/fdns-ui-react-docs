@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import JSONPretty from 'react-json-pretty';
-import Markdown from 'react-remarkable';
+import ReactMarkdown from 'react-markdown';
 
 // set the prop types from predefined shapes or standard types
 const _sampleProp = PropTypes.shape({
@@ -30,8 +30,8 @@ class Shape extends Component {
     return (
       <tr key={i}>
         <td>{propName}</td>
-        <td><em><Markdown>{propType}</Markdown></em></td>
-        <td><Markdown>{desc}</Markdown></td>
+        <td><em><ReactMarkdown source={propType}/></em></td>
+        <td><ReactMarkdown source={desc}/></td>
       </tr>
     );
   }
