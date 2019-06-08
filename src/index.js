@@ -15,12 +15,14 @@ function fixSidenavHeight() {
 
 window.onscroll = function () {
   var sidenav = document.getElementById('sidenav');
-  if (window.scrollY >= 230)
-    sidenav.className += ' fixed';
-  else
-  	if (sidenav.className.includes('fixed')) sidenav.className -= ' fixed';
+  if (sidenav) {
+	  if (window.scrollY >= 230)
+	    sidenav.className += ' fixed';
+	  else
+	  	if (sidenav.className.includes('fixed')) sidenav.className -= ' fixed';
 
-  fixSidenavHeight();
+	  fixSidenavHeight();
+  }
 };
 
 fixSidenavHeight();

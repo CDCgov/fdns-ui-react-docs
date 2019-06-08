@@ -61,12 +61,12 @@ div.component.blue div.contain-component {
 #sidenav ul {
   padding: 0 10px;
 }
-#sidenav h3 {
+#sidenav h6 {
   cursor: pointer;
   padding-left: 7px;
   border-left: 3px solid rgba(0,0,0,0);
 }
-#sidenav h3:hover {
+#sidenav h6:hover {
   border-left: 3px solid #0197d4;
 }
 
